@@ -1,9 +1,9 @@
-defmodule TestApp.MixProject do
+defmodule AutoTweetApp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :test_app,
+      app: :auto_tweet_app,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
@@ -15,7 +15,7 @@ defmodule TestApp.MixProject do
   def application do
     [
       extra_applications: [:logger, :quantum],
-      mod: {TestApp.Application, []}
+      mod: {AutoTweetApp.Application, []}
     ]
   end
 

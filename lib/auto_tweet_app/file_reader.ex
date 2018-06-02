@@ -1,4 +1,4 @@
-defmodule TestApp.FileReader do
+defmodule AutoTweetApp.FileReader do
   def get_string_to_tweet(path) do
     File.read!(path)
     |> String.split("\n")
@@ -10,8 +10,8 @@ end
 
 # iex -S mix
 
-# cd("lib/test_app")
+# cd("lib/auto_tweet_app")
 # ls
 
-# TestApp.FileReader.get_string_to_tweet("sample.txt")
+# AutoTweetApp.FileReader.get_string_to_tweet("sample.txt")
 

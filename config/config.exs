@@ -10,20 +10,20 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :test_app, key: :value
+#     config :auto_tweet_app, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:test_app, :key)
+#     Application.get_env(:auto_tweet_app, :key)
 #
 # You can also configure a 3rd-party app:
 #
     config :logger, level: :debug
 
-    config :test_app, TestApp.Scheduler,
+    config :auto_tweet_app, AutoTweetApp.Scheduler,
       jobs: [
         # Every minute
-        {"* * * * *", {TestApp.Scheduler, :tweet_file, ["lib/test_app/sample.txt"]}}
+        {"* * * * *", {AutoTweetApp.Scheduler, :tweet_file, ["lib/auto_tweet_app/sample.txt"]}}
         # # Every 15 minutes
         # {"*/15 * * * *",   fn -> System.cmd("rm", ["/tmp/tmp_"]) end},
         # # Runs on 18, 20, 22, 0, 2, 4, 6:

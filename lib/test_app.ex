@@ -1,6 +1,6 @@
-defmodule TestApp do
+defmodule AutoTweetApp do
   @moduledoc """
-  Documentation for TestApp.
+  Documentation for AutoTweetApp.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule TestApp do
 
   ## Examples
 
-      iex> TestApp.hello
+      iex> AutoTweetApp.hello
       :world
 
   """

@@ -1,4 +1,4 @@
-defmodule TestApp.Application do
+defmodule AutoTweetApp.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -10,14 +10,14 @@ defmodule TestApp.Application do
 
     # List all child processes to be supervised
     children = [
-      # Starts a worker by calling: TestApp.Worker.start_link(arg)
-      # {TestApp.Worker, arg},
-      worker(TestApp.Scheduler, [])
+      # Starts a worker by calling: AutoTweetApp.Worker.start_link(arg)
+      # {AutoTweetApp.Worker, arg},
+      worker(AutoTweetApp.Scheduler, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: TestApp.Supervisor]
+    opts = [strategy: :one_for_one, name: AutoTweetApp.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
