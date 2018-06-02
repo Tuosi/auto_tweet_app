@@ -7,11 +7,3 @@ defmodule AutoTweetApp.FileReader do
     |> Enum.random()
   end
 end
-
-# iex -S mix
-
-# cd("lib/auto_tweet_app")
-# ls
-
-# AutoTweetApp.FileReader.get_string_to_tweet("sample.txt")
-
