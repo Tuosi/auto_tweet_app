@@ -10,4 +10,9 @@ defmodule AutoTweetApp.Tweet do
     ExTwitter.configure(:process, config)
     ExTwitter.update(str)
   end
+
+  def send_random(file) do
+    AutoTweetApp.FileReader.get_string_to_tweet(file)
+    |> send
+  end
 end
