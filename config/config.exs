@@ -18,7 +18,19 @@ use Mix.Config
 #
 # You can also configure a 3rd-party app:
 #
-#     config :logger, level: :info
+    config :logger, level: :debug
+
+    config :test_app, TestApp.Scheduler,
+      jobs: [
+        # Every minute
+        {"* * * * *", {TestApp.Scheduler, :tweet_file, ["lib/test_app/sample.txt"]}}
+        # # Every 15 minutes
+        # {"*/15 * * * *",   fn -> System.cmd("rm", ["/tmp/tmp_"]) end},
+        # # Runs on 18, 20, 22, 0, 2, 4, 6:
+        # {"0 18-6/2 * * *", fn -> :mnesia.backup('/var/backup/mnesia') end},
+        # # Runs every midnight:
+        # {"@daily",         {Backup, :backup, []}}
+      ]
 #
 
 # It is also possible to import configuration files, relative to this
