@@ -18,6 +18,3 @@ defmodule AutoTweetApp.TweetServer do
     GenServer.cast(:tweet_server, {:tweet, tweet})
   end
 end
-
-# Process.whereis(:tweet_server)
-# Process.whereis(:tweet_server) |> Process.exit(:kill)

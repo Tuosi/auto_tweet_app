@@ -11,8 +11,8 @@ defmodule AutoTweetApp.Tweet do
     ExTwitter.update(str)
   end
 
-  def send_random(file) do
-    AutoTweetApp.FileReader.get_string_to_tweet(file)
+  def send_random(filepath) do
+    AutoTweetApp.FileReader.get_string_to_tweet(filepath)
     |> send
   end
 end
