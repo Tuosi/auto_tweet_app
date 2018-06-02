@@ -25,7 +25,8 @@ defmodule AutoTweetApp.MixProject do
       # {:poison, "~> 3.1"},
       {:credo, "~> 0.9.2"},
       {:quantum, "~> 2.2"},
-      {:extwitter, "~> 0.9.3"}
+      {:extwitter, "~> 0.9.3"},
+      {:oauth, github: "tim/erlang-oauth"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
