@@ -3,5 +3,6 @@ defmodule AutoTweetApp.Scheduler do
 
   def tweet_file(path) do
     AutoTweetApp.FileReader.get_string_to_tweet(path)
+    |> AutoTweetApp.TweetServer.tweet
   end
 end

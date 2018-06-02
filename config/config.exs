@@ -23,7 +23,8 @@ use Mix.Config
     config :auto_tweet_app, AutoTweetApp.Scheduler,
       jobs: [
         # Every minute
-        {"* * * * *", {AutoTweetApp.Scheduler, :tweet_file, ["sample.txt"]}}
+        # path = Path.join("#{:code.priv_dir(:auto_tweet_app)}", "sample.txt")
+        {"* * * * *", {AutoTweetApp.Scheduler, :tweet_file, ["priv/sample.txt"]}}
         # # Every 15 minutes
         # {"*/15 * * * *",   fn -> System.cmd("rm", ["/tmp/tmp_"]) end},
         # # Runs on 18, 20, 22, 0, 2, 4, 6:

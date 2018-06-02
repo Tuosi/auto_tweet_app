@@ -10,8 +10,8 @@ defmodule AutoTweetApp.Application do
 
     # List all child processes to be supervised
     children = [
-      worker(AutoTweetApp.TweetServer, [])
-      # worker(AutoTweetApp.Scheduler, [])
+      # worker(AutoTweetApp.TweetServer, [])
+      worker(AutoTweetApp.Scheduler, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -20,3 +20,5 @@ defmodule AutoTweetApp.Application do
     Supervisor.start_link(children, opts)
   end
 end
+
+# mix run --no-halt
