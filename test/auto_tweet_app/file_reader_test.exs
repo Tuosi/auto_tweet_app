@@ -2,7 +2,7 @@ defmodule AutoTweetApp.FileReaderTest do
   use ExUnit.Case
   # import Mock
   import AutoTweetApp.FileReader
-  doctest AutoTweetApp
+  doctest AutoTweetApp.FileReader
 
   test "Passing a file should return a string" do
     filepath = Path.join("#{:code.priv_dir(:auto_tweet_app)}", "sample.txt")
