@@ -1,5 +1,6 @@
 defmodule AutoTweetApp.FileReaderTest do
   use ExUnit.Case
+  # import Mock
   import AutoTweetApp.FileReader
   doctest AutoTweetApp
 
@@ -22,4 +23,12 @@ defmodule AutoTweetApp.FileReaderTest do
 
     assert str == ""
   end
+
+  # test "The string should be trimed" do
+  #   with_mock File, [:read!, fn(_) -> " ABC  " end] do
+  #     str = get_string_to_tweet("doesn't exist.txt")
+
+  #     assert str == "ABC"
+  #   end
+  # end
 end
